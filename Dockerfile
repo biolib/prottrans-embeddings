@@ -10,8 +10,10 @@ RUN pip install -q SentencePiece transformers
 RUN pip install numpy
 
 COPY download_model_and_tokenizer.py download_model_and_tokenizer.py
+COPY download_model_and_tokenizer_2.py download_model_and_tokenizer_2.py
 
 RUN python3 download_model_and_tokenizer.py
+RUN python3 download_model_and_tokenizer_2.py
 
 RUN pip install Biopython
 
